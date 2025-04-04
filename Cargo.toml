@@ -4,3 +4,22 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+dashmap = "6.1.0"
+flate2 = "1.1.1"
+needletail = "0.6.3"
+rayon = "1.10.0"
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[lib]
+name = "kmerr"
+path = "src/lib.rs"
+
+[[bench]]
+name = "fastq_to_fasta"
+harness = false
+
+[[bench]]
+name = "kmer_bench"
+harness = false
